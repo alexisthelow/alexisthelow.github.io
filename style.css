@@ -1,0 +1,115 @@
+* {
+	margin: 0;
+	padding: 0;
+/*	border: 1px solid black; */
+	box-sizing: border-box;
+	/*google fonts?*/
+}
+
+h1, h2, h3 {
+	font-family: "Open Sans", sans-serif;
+	text-align: center;
+}	
+
+p {
+	font-family: Oxygen, sans-serif;
+}
+
+/* begin main page css */
+
+#container p {
+	padding: 25px;
+}
+
+.code {
+	font-family: "Courier New";
+	display: inline-block;
+	padding: 0px 2px 0px 2px;
+}
+
+#container img {
+	border-radius: 100%;
+/*  padding: 25px; */
+	margin: 25px;
+}
+
+#top-cell {
+	height: 100px;
+	width: 700px;
+	text-align: center;
+	margin: auto;
+	padding-top: 25px;
+}
+
+#container {
+	height: 700px;
+	width: 1000px;
+	margin: auto;
+}
+
+#left-side {
+	width: 450px;
+	float: left;
+	height: 600px;
+	background-color: gray;
+	text-align: center;
+}
+
+#right-side {
+	width: 450px;
+	float: right;
+	height: 600px;	
+	background-color: gray;
+	text-align: center;
+}
+#clear {
+	clear: both;
+}
+
+/* end main page css */
+
+/* begin about page css */
+
+#about-container {
+	height: 700px;
+	width: 1150px;
+	padding: 25px;
+	margin: auto;
+}
+
+#about-left {
+	float: left;
+	height: 700px;
+	width: 450px;
+}
+
+#about-right {
+	float: right;
+	background-color: gray;
+	height: 700px;
+	width: 650px;
+	text-align: left;
+	border-left: 2px solid DarkGray;
+}
+
+#about-right p {
+	padding: 10px;
+}
+
+/* end about page css */
+
+/* begin code answer css */
+
+#code-container {
+	height: auto;
+	width: 1150px;
+	padding: 25px;
+	margin: auto;
+	margin-top: 25px;
+	background-color: gray;
+}
+
+#code-container h3, p {
+	text-align: left;
+	padding: 5px;
+}

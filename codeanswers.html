@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oxygen" rel="stylesheet">
+	<link href="style.css" type="text/css" rel="stylesheet">
+	<title>Codesiderations</title>
+  </head>
+  <body>
+    <div id="code-container">
+	  <h3>What is the difference between 'switch' and 'if/else'? When would you use one versus the other?</h3>
+	  <p>Switch statements compare only one variable, and can do a wide variety of things based on the value of that one variable. If/else statements can compare a lot of different variables, but will follow rather strict guidelines--the very first if or else if statement that evaluates to true will be executed, even if the one you want it to execute is farther down in the code. Consequently, it's very important to make sure that you structure if/else statements to return the desired result.</p>
+	  <h3>When would you use '=' versus '==' versus '<span class="code">.equals()</span>'? What do each of them do, and when should I use them?</h3>
+	  <p>= is used to assign a value to a variable. It never means "equals" or "is equal to."</p>
+      <p>== tests to see whether two objects refer to the same place in memory.</p>
+      <p>"<span class="code">.equals()</span>" is a method from java.lang.Object that determines if the object specified in the parameter has exactly the same value as the object from which it was called. (<span class="code">.equalsIgnoreCase()</span> is sometimes better, if you don't need two objects to have the same capitalization.)</p>
+	  <h3>What does it mean to 'cast a double to an int'? When should I do this? What happens when I do this?</h3>
+	  <p>To "cast a double to an int" is to take a double object and truncate everything after the decimal point, leaving an integer. This *always* rounds down, so if you need to round a double to an integer more accurately, try this: <span class="code">(int)Math.round(a)</span>, where a is the double you need to round. Even in this case, you need to cast the result of <span class="code">Math.round(a)</span> to an int, because <span class="code">Math.round()</span> returns a long value.</p>
+	  <h3>What is 'void' in a method declaration? How does this differ from declaring a method with a return type?</h3>
+	  <p>"Void" in a method declaration means that it returns nothing. That isn't to say that the method won't do anything, just that calling it returns nothing when called. In this case, you don't have to specify a return in the body of the method. If you specify a return type for a method, it will return that type of object--and that return type must be specified in the body of the method. So: if you have a method <span class="code">public boolean isThatSo()</span>, it will return true or false. If the method is <span class="code">public int isThatSo()</span>, it will return an Integer object.</p>
+	  <h3>How do you generate a random number in Java? What is '<span class="code">Math.random()</span>'?</h3>
+	  <p><span class="code">Math.random()</span> is my favorite method of all time forever. Why? Because I *really* like D20 games, and I have plenty of need for randomly generated numbers between certain ranges.</p>
+      <p>Math (from the package java.lang) is a Java class with methods for many different mathematical operations. <span class="code">Math.random()</span> is just one such method. It can provide a random number between *any* range, with a little fiddling.</p>
+      <h3>What is the return type of the '<span class="code">.random()</span>' method?</h3>
+	  <p>When called, <span class="code">Math.random()</span> will first create a new pseudorandom number generator (as <span class="code">new java.util.Random()</span>). It will then return a positive double greater than or equal to 0.0 and less than 1.0.</p>
+	  <p>However, this number is *pseudorandom*, meaning it's not truly random. It uses System.currentTimeMillis() for its seed value; that means it's random enough to be statistically random, but not in its strictest sense.</p>
+	  <h3>Why is the 'M' in 'Math' capitalized?</h3>
+	  <p>It's capitalized because it's a class, and by convention (i.e., general practice) class names are capitalized. You don't *have* to follow this or any other convention, but someone else who looks at your code may be confused.</p>
+	</div>
+  </body>
+</html>
