@@ -13,6 +13,7 @@ h1, h2, h3 {
 
 p {
 	font-family: Oxygen, sans-serif;
+	text-align: center;
 }
 
 /* begin main page css */
@@ -40,7 +41,7 @@ p {
 	margin: auto;
 	padding-top: 25px;
 }
-
+	
 #container {
 	height: 700px;
 	width: 1000px;
@@ -109,7 +110,7 @@ p {
 	background-color: gray;
 }
 
-#code-container h3, p {
+#code-container h3, #code-container p {
 	text-align: left;
 	padding: 5px;
 }
